@@ -2,6 +2,7 @@ let btn = document.getElementById('start')
 let buttonn = document.getElementById('stop')
 let x
 let value = false
+let reset = document.getElementById('reset')
 
 
 function start() {
@@ -23,6 +24,18 @@ btn.addEventListener('click', function (e) {
     else {
         start()
     }
+})
+
+reset.addEventListener('click', function (e) {
+    let milisecond = 0
+    let second = 0
+    let minute = 0
+    let hour = 0
+
+    document.getElementById('milisec').textContent = "00"
+    document.getElementById('sec').textContent = "00"
+    document.getElementById('min').textContent = "00"
+    document.getElementById('hr').textContent = "00"
 })
 
 
