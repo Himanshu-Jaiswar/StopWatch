@@ -2,7 +2,6 @@ let btn = document.getElementById('start')
 let buttonn = document.getElementById('stop')
 let x
 let value = false
-let reset = document.getElementById('reset')
 
 
 function start() {
@@ -26,11 +25,13 @@ btn.addEventListener('click', function (e) {
     }
 })
 
+let reset = document.getElementById('reset')
+
 reset.addEventListener('click', function (e) {
-    let milisecond = 0
-    let second = 0
-    let minute = 0
-    let hour = 0
+    milisecond = 0
+    second = 0
+    minute = 0
+    hour = 0
 
     document.getElementById('milisec').textContent = "00"
     document.getElementById('sec').textContent = "00"
@@ -45,7 +46,7 @@ let details = {}
 save.addEventListener('click', function (e) {
     let n = prompt("Name")
 
-    if (n != "") {
+    if (n != "" || n != null || n != undefined) {
         details[n] = h + " " + m + " " + s + " " + mm + " "
 
         document.getElementById('list').innerHTML += `${n + " : " + details[n]} <br>`
