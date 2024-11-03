@@ -43,7 +43,6 @@ let details = {}
 
 
 save.addEventListener('click', function(e){
-    let arr = []
     let n = prompt("Name")
 
     details[n] = h + " " + m  + " " + s + " " + mm + " "
