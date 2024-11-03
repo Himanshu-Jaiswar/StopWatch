@@ -38,6 +38,20 @@ reset.addEventListener('click', function (e) {
     document.getElementById('hr').textContent = "00"
 })
 
+let save = document.getElementById('save')
+let details = {}
+
+
+save.addEventListener('click', function(e){
+    let arr = []
+    let n = prompt("Name")
+
+    details[n] = h + " " + m  + " " + s + " " + mm + " "
+    
+    document.getElementById('list').innerHTML += `${n + details[n]} <br>`
+    
+})
+
 
 let milisecond = 0
 let second = 0
