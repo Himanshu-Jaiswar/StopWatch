@@ -38,6 +38,28 @@ reset.addEventListener('click', function (e) {
     document.getElementById('hr').textContent = "00"
 })
 
+let save = document.getElementById('save')
+let details = {}
+
+
+save.addEventListener('click', function (e) {
+    let n = prompt("Name")
+
+    if (n != "") {
+        details[n] = h + " " + m + " " + s + " " + mm + " "
+
+        document.getElementById('list').innerHTML += `${n + " : " + details[n]} <br>`
+
+        console.log(n);
+    }
+})
+
+let clear = document.getElementById('delete')
+
+clear.addEventListener('click', function (e) {
+    document.getElementById('list').innerHTML = ""
+})
+
 let milisecond = 0
 let second = 0
 let minute = 0
